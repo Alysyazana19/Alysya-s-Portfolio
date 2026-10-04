@@ -485,14 +485,19 @@ a {
 
 .about-profile-grid {
     display: grid;
-    grid-template-columns: 340px 1fr;
-    gap: 85px;
+
+    /* Smaller portrait column */
+    grid-template-columns: 290px 1fr;
+
+    gap: 80px;
     align-items: center;
 }
 
 .profile-photo-wrapper {
     position: relative;
+
     width: 100%;
+    max-width: 290px;
 }
 
 .profile-photo {
@@ -503,14 +508,14 @@ a {
 
     overflow: hidden;
 
-    border: 1px solid rgba(0, 245, 212, 0.35);
+    border: 1px solid rgba(0, 245, 212, 0.40);
     border-radius: 22px;
 
-    background: #0b0f0e;
+    background: #f4f4f4;
 
     box-shadow:
         0 25px 60px rgba(0, 0, 0, 0.40),
-        0 0 40px rgba(0, 245, 212, 0.07);
+        0 0 40px rgba(0, 245, 212, 0.08);
 }
 
 .profile-photo::before {
@@ -520,7 +525,7 @@ a {
     top: 0;
     left: 0;
 
-    z-index: 2;
+    z-index: 3;
 
     width: 100%;
     height: 3px;
@@ -536,18 +541,25 @@ a {
         0 0 16px rgba(0, 245, 212, 0.35);
 }
 
+
+/* Show more of the original photo */
+
 .profile-photo img {
     display: block;
 
     width: 100%;
     height: 100%;
 
-    object-fit: cover;
+    object-fit: contain;
     object-position: center;
 
+    background: #f4f4f4;
+
+    transform: scale(0.90);
+
     filter:
-        contrast(1.03)
-        saturate(0.92);
+        contrast(1.02)
+        saturate(0.95);
 
     transition:
         transform 0.4s ease,
@@ -560,21 +572,23 @@ a {
     position: absolute;
     inset: 0;
 
+    z-index: 2;
+
     pointer-events: none;
 
     background:
         linear-gradient(
             180deg,
-            transparent 60%,
-            rgba(5, 6, 6, 0.20) 100%
+            transparent 72%,
+            rgba(5, 6, 6, 0.10) 100%
         );
 }
 
 .profile-photo:hover img {
-    transform: scale(1.025);
+    transform: scale(0.93);
 
     filter:
-        contrast(1.04)
+        contrast(1.03)
         saturate(1);
 }
 
@@ -604,7 +618,7 @@ a {
 }
 
 .about-content {
-    max-width: 680px;
+    max-width: 720px;
 }
 
 .about-content .section-title {
@@ -612,7 +626,7 @@ a {
 }
 
 .about-text {
-    max-width: 600px;
+    max-width: 650px;
 
     color: #909996;
 
@@ -1038,8 +1052,12 @@ a {
     }
 
     .about-profile-grid {
-        grid-template-columns: 260px 1fr;
+        grid-template-columns: 240px 1fr;
         gap: 45px;
+    }
+
+    .profile-photo-wrapper {
+        max-width: 240px;
     }
 
     .section-heading {
@@ -1069,7 +1087,7 @@ a {
     }
 
     .profile-photo-wrapper {
-        max-width: 310px;
+        max-width: 280px;
     }
 }
 
@@ -1142,7 +1160,7 @@ a {
     }
 
     .profile-photo-wrapper {
-        max-width: 280px;
+        max-width: 260px;
     }
 
     .project-card {
