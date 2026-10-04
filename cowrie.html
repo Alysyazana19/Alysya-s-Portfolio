@@ -1,0 +1,468 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <!-- TYPOGRAPHY -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+    <link
+        href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Manrope:wght@400;500;600;700;800&display=swap"
+        rel="stylesheet"
+    >
+
+    <!-- MAIN STYLESHEET -->
+    <link rel="stylesheet" href="style.css">
+
+    <title>Cowrie Honeypot Case Study | Nur Alysya Syazana</title>
+</head>
+
+<body>
+
+    <!-- NAVIGATION -->
+    <nav class="navbar">
+        <div class="container nav-container">
+            <a href="index.html" class="logo">NAS<span>.</span></a>
+
+            <div class="nav-links">
+                <a href="index.html#home">Home</a>
+                <a href="index.html#about">About</a>
+                <a href="index.html#projects">Projects</a>
+                <a href="index.html#skills">Skills</a>
+                <a href="index.html#contact">Contact</a>
+            </div>
+
+            <a href="index.html#contact" class="nav-contact">Reach Out</a>
+        </div>
+    </nav>
+
+
+    <!-- CASE STUDY HERO -->
+    <section class="case-hero">
+        <div class="container">
+
+            <a href="index.html#projects" class="back-link">
+                ← Back to Projects
+            </a>
+
+            <p class="eyebrow">INTRUSION DETECTION · ACADEMIC PROJECT</p>
+
+            <h1>
+                SSH Brute Force Detection<br>
+                <span>Using Cowrie Honeypot.</span>
+            </h1>
+
+            <p class="case-intro">
+                A controlled cybersecurity lab designed to simulate SSH
+                brute-force activity and examine how a Cowrie honeypot
+                captures, records and presents intrusion attempts for analysis.
+            </p>
+
+            <div class="hero-tags">
+                <span>Cowrie</span>
+                <span>Ncrack</span>
+                <span>Kali Linux</span>
+                <span>Python</span>
+                <span>Flask</span>
+                <span>VirtualBox</span>
+            </div>
+
+        </div>
+    </section>
+
+
+    <!-- PROJECT OVERVIEW -->
+    <section class="section case-section">
+        <div class="container case-layout">
+
+            <div class="case-label">
+                <p>01 / OVERVIEW</p>
+            </div>
+
+            <div class="case-content">
+                <h2>Project Overview.</h2>
+
+                <p>
+                    This project explored honeypot-based intrusion detection
+                    by deploying Cowrie as a simulated SSH service and using
+                    Ncrack to generate controlled brute-force authentication
+                    attempts.
+                </p>
+
+                <p>
+                    The environment was designed to demonstrate the complete
+                    detection process — from attack simulation and event capture
+                    to JSON log analysis and visualisation through a web-based
+                    monitoring dashboard.
+                </p>
+
+                <div class="case-meta-grid">
+
+                    <div class="case-meta">
+                        <span>PROJECT TYPE</span>
+                        <strong>Academic Group Project</strong>
+                    </div>
+
+                    <div class="case-meta">
+                        <span>AREA</span>
+                        <strong>Intrusion Detection</strong>
+                    </div>
+
+                    <div class="case-meta">
+                        <span>DEFENSIVE TOOL</span>
+                        <strong>Cowrie Honeypot</strong>
+                    </div>
+
+                    <div class="case-meta">
+                        <span>ATTACK TOOL</span>
+                        <strong>Ncrack</strong>
+                    </div>
+
+                </div>
+            </div>
+
+        </div>
+    </section>
+
+
+    <!-- MY CONTRIBUTION -->
+    <section class="section case-section">
+        <div class="container case-layout">
+
+            <div class="case-label">
+                <p>02 / CONTRIBUTION</p>
+            </div>
+
+            <div class="case-content">
+                <h2>My Contribution.</h2>
+
+                <p>
+                    As a member of the project team, I contributed across the
+                    full project lifecycle, including lab environment setup,
+                    network configuration, Cowrie deployment and configuration,
+                    Ncrack attack simulation, log monitoring and analysis,
+                    Flask dashboard implementation, testing, documentation
+                    and presentation preparation.
+                </p>
+            </div>
+
+        </div>
+    </section>
+
+
+    <!-- LAB ENVIRONMENT -->
+    <section class="section case-section">
+        <div class="container case-layout">
+
+            <div class="case-label">
+                <p>03 / ENVIRONMENT</p>
+            </div>
+
+            <div class="case-content">
+                <h2>Lab Environment.</h2>
+
+                <p>
+                    The project was implemented using two Kali Linux virtual
+                    machines in Oracle VirtualBox.
+                </p>
+
+                <div class="case-two-column">
+
+                    <div class="case-info-card">
+                        <span>ATTACKER VM</span>
+                        <h3>Kali Linux + Ncrack</h3>
+                        <p>
+                            Generated controlled SSH brute-force authentication
+                            attempts against the honeypot.
+                        </p>
+                    </div>
+
+                    <div class="case-info-card">
+                        <span>IDS VM</span>
+                        <h3>Kali Linux + Cowrie</h3>
+                        <p>
+                            Operated as the honeypot and captured incoming SSH
+                            connections and authentication activity.
+                        </p>
+                    </div>
+
+                </div>
+
+                <p>
+                    A Host-Only Adapter provided isolated communication between
+                    both virtual machines, while NAT provided controlled internet
+                    connectivity. Cowrie listened for SSH connections on
+                    TCP port 2222.
+                </p>
+
+                <!-- ARCHITECTURE DIAGRAM WILL GO HERE -->
+                <div class="evidence-placeholder">
+                    <span>ARCHITECTURE DIAGRAM</span>
+                    <p>
+                        Attacker VM → Ncrack → SSH :2222 → Cowrie →
+                        JSON Logs → Flask Dashboard
+                    </p>
+                </div>
+
+            </div>
+
+        </div>
+    </section>
+
+
+    <!-- IMPLEMENTATION -->
+    <section class="section case-section">
+        <div class="container case-layout">
+
+            <div class="case-label">
+                <p>04 / IMPLEMENTATION</p>
+            </div>
+
+            <div class="case-content">
+                <h2>Honeypot Deployment.</h2>
+
+                <p>
+                    Cowrie was deployed inside a Python virtual environment on
+                    the IDS machine. Its configuration was prepared and the
+                    honeypot service was initialised using the Twisted framework.
+                </p>
+
+                <p>
+                    Once operational, Cowrie reported that it was ready to
+                    accept SSH connections, and the service was verified as
+                    listening on TCP port 2222.
+                </p>
+
+                <div class="evidence-placeholder">
+                    <span>EVIDENCE 01</span>
+                    <p>
+                        Cowrie service running and ready to accept SSH
+                        connections on port 2222.
+                    </p>
+                </div>
+
+            </div>
+
+        </div>
+    </section>
+
+
+    <!-- ATTACK SIMULATION -->
+    <section class="section case-section">
+        <div class="container case-layout">
+
+            <div class="case-label">
+                <p>05 / SIMULATION</p>
+            </div>
+
+            <div class="case-content">
+                <h2>Attack Simulation & Detection.</h2>
+
+                <p>
+                    A controlled SSH brute-force attack was performed from the
+                    attacker VM using Ncrack against the Cowrie honeypot.
+                </p>
+
+                <p>
+                    The simulation used the username root with the Rockyou
+                    password wordlist. The attack was deliberately throttled
+                    by limiting active connections and using a low timing
+                    template.
+                </p>
+
+                <div class="evidence-placeholder">
+                    <span>EVIDENCE 02</span>
+                    <p>
+                        Controlled SSH brute-force simulation performed
+                        from the attacker VM using Ncrack.
+                    </p>
+                </div>
+
+                <p>
+                    Cowrie successfully captured the incoming SSH activity and
+                    recorded information including source IP addresses,
+                    timestamps, session information and event details.
+                </p>
+
+                <div class="evidence-placeholder">
+                    <span>EVIDENCE 03</span>
+                    <p>
+                        Cowrie JSON logs showing captured SSH activity
+                        from the attacker machine.
+                    </p>
+                </div>
+
+            </div>
+
+        </div>
+    </section>
+
+
+    <!-- LOG ANALYSIS -->
+    <section class="section case-section">
+        <div class="container case-layout">
+
+            <div class="case-label">
+                <p>06 / ANALYSIS</p>
+            </div>
+
+            <div class="case-content">
+                <h2>Log Analysis & Monitoring.</h2>
+
+                <p>
+                    Cowrie generated structured JSON logs containing
+                    security-relevant information that could be used to
+                    analyse the captured SSH activity.
+                </p>
+
+                <div class="log-fields">
+                    <span>src_ip</span>
+                    <span>dst_ip</span>
+                    <span>timestamp</span>
+                    <span>session</span>
+                    <span>duration</span>
+                    <span>eventid</span>
+                </div>
+
+                <p>
+                    These records made it possible to examine where connections
+                    originated, when activity occurred, the type of event
+                    detected and the lifecycle of individual sessions.
+                </p>
+
+                <h3 class="case-subheading">Monitoring Dashboard</h3>
+
+                <p>
+                    Rather than relying only on raw terminal output, the project
+                    also used a Flask-based dashboard to present Cowrie activity
+                    through a web interface.
+                </p>
+
+                <p>
+                    The dashboard displayed information including attack time,
+                    attacker IP address, attempted username and password, and
+                    session status.
+                </p>
+
+                <div class="evidence-placeholder">
+                    <span>EVIDENCE 04</span>
+                    <p>
+                        Flask monitoring dashboard displaying captured
+                        Cowrie authentication activity.
+                    </p>
+                </div>
+
+            </div>
+
+        </div>
+    </section>
+
+
+    <!-- OUTCOME -->
+    <section class="section case-section">
+        <div class="container case-layout">
+
+            <div class="case-label">
+                <p>07 / OUTCOME</p>
+            </div>
+
+            <div class="case-content">
+                <h2>Project Outcome.</h2>
+
+                <p>
+                    The project successfully demonstrated a complete controlled
+                    intrusion-detection workflow. Cowrie detected and recorded
+                    the simulated SSH activity, while its structured logs
+                    provided information that could be analysed to understand
+                    connection and authentication behaviour.
+                </p>
+
+                <div class="workflow">
+                    <span>SIMULATE</span>
+                    <b>→</b>
+                    <span>CAPTURE</span>
+                    <b>→</b>
+                    <span>LOG</span>
+                    <b>→</b>
+                    <span>ANALYSE</span>
+                    <b>→</b>
+                    <span>VISUALISE</span>
+                </div>
+
+                <p>
+                    The Flask dashboard provided a more accessible way to
+                    monitor captured events and translate raw honeypot logs
+                    into readable security information.
+                </p>
+            </div>
+
+        </div>
+    </section>
+
+
+    <!-- KEY TAKEAWAYS -->
+    <section class="section case-section">
+        <div class="container case-layout">
+
+            <div class="case-label">
+                <p>08 / TAKEAWAYS</p>
+            </div>
+
+            <div class="case-content">
+                <h2>Key Takeaways.</h2>
+
+                <p>
+                    Through this project, I gained practical experience in
+                    deploying and configuring a honeypot, creating an isolated
+                    virtual attack environment, simulating authentication
+                    attacks, analysing structured security logs and presenting
+                    captured security events through a monitoring interface.
+                </p>
+
+                <div class="takeaway-grid">
+
+                    <div>
+                        <span>01</span>
+                        <p>Honeypot deployment and configuration</p>
+                    </div>
+
+                    <div>
+                        <span>02</span>
+                        <p>Controlled attack simulation</p>
+                    </div>
+
+                    <div>
+                        <span>03</span>
+                        <p>Security log analysis</p>
+                    </div>
+
+                    <div>
+                        <span>04</span>
+                        <p>Security event visualisation</p>
+                    </div>
+
+                </div>
+
+                <a href="index.html#projects" class="btn btn-secondary case-return">
+                    ← Back to Projects
+                </a>
+
+            </div>
+
+        </div>
+    </section>
+
+
+    <!-- FOOTER -->
+    <footer class="case-footer">
+        <div class="container footer">
+            <p>© 2026 Nur Alysya Syazana</p>
+            <a href="#">Back to top ↑</a>
+        </div>
+    </footer>
+
+</body>
+</html>
