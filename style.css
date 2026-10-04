@@ -1,6 +1,8 @@
 /* ========================================
    NUR ALYSYA SYAZANA
    CYBERSECURITY PORTFOLIO
+
+   Graphite / Turquoise / Silver
 ======================================== */
 
 * {
@@ -14,8 +16,8 @@ html {
 }
 
 body {
-    background: #080c12;
-    color: #f5f7fa;
+    background: #050706;
+    color: #f5f7f7;
     font-family: Arial, Helvetica, sans-serif;
     line-height: 1.6;
     overflow-x: hidden;
@@ -42,8 +44,8 @@ a {
     width: 100%;
     z-index: 1000;
 
-    background: rgba(8, 12, 18, 0.88);
-    border-bottom: 1px solid rgba(255, 255, 255, 0.07);
+    background: rgba(5, 7, 6, 0.90);
+    border-bottom: 1px solid rgba(255, 255, 255, 0.08);
     backdrop-filter: blur(14px);
 }
 
@@ -63,7 +65,7 @@ a {
 }
 
 .logo span {
-    color: #58a6ff;
+    color: #00a19c;
 }
 
 .nav-links {
@@ -73,20 +75,20 @@ a {
 }
 
 .nav-links a {
-    color: #a8b3c1;
+    color: #a7aeac;
     font-size: 0.88rem;
     text-decoration: none;
     transition: 0.25s ease;
 }
 
 .nav-links a:hover {
-    color: #ffffff;
+    color: #00a19c;
 }
 
 .nav-contact {
     padding: 10px 20px;
 
-    border: 1px solid #58a6ff;
+    border: 1px solid #00a19c;
     border-radius: 999px;
 
     color: #ffffff;
@@ -97,11 +99,11 @@ a {
 }
 
 .nav-contact:hover {
-    background: #58a6ff;
-    color: #07111d;
+    background: #00a19c;
+    color: #03100f;
 
     box-shadow:
-        0 0 25px rgba(88, 166, 255, 0.28);
+        0 0 28px rgba(0, 161, 156, 0.28);
 }
 
 
@@ -110,6 +112,8 @@ a {
 ======================================== */
 
 .hero {
+    position: relative;
+
     min-height: 100vh;
 
     display: flex;
@@ -119,11 +123,38 @@ a {
 
     background:
         radial-gradient(
-            circle at 80% 45%,
-            rgba(88, 166, 255, 0.08),
-            transparent 32%
+            circle at 82% 42%,
+            rgba(0, 161, 156, 0.11),
+            transparent 30%
         ),
-        #080c12;
+        linear-gradient(
+            120deg,
+            #050706 0%,
+            #080b0a 55%,
+            #07100f 100%
+        );
+}
+
+/* Subtle technical line */
+
+.hero::after {
+    content: "";
+
+    position: absolute;
+    left: 0;
+    bottom: 0;
+
+    width: 100%;
+    height: 1px;
+
+    background: linear-gradient(
+        90deg,
+        transparent,
+        #00a19c,
+        transparent
+    );
+
+    opacity: 0.45;
 }
 
 .hero-grid {
@@ -140,15 +171,17 @@ a {
 .eyebrow {
     margin-bottom: 22px;
 
-    color: #58a6ff;
+    color: #00a19c;
 
     font-size: 0.78rem;
     font-weight: 700;
-    letter-spacing: 0.22em;
+    letter-spacing: 0.24em;
 }
 
 .hero h1 {
     margin-bottom: 24px;
+
+    color: #f6f7f7;
 
     font-size: clamp(3.8rem, 7vw, 6.8rem);
     line-height: 0.92;
@@ -162,7 +195,7 @@ a {
 .hero h2 {
     margin-bottom: 20px;
 
-    color: #c8d1dc;
+    color: #c4cac8;
 
     font-size: clamp(1.25rem, 2.5vw, 1.75rem);
     font-weight: 400;
@@ -171,10 +204,13 @@ a {
 .hero-description {
     max-width: 650px;
 
-    color: #8995a5;
+    color: #89918f;
 
     font-size: 1.02rem;
 }
+
+
+/* HERO TAGS */
 
 .hero-tags {
     display: flex;
@@ -187,15 +223,18 @@ a {
 .hero-tags span {
     padding: 7px 13px;
 
-    border: 1px solid rgba(88, 166, 255, 0.22);
+    border: 1px solid rgba(0, 161, 156, 0.30);
     border-radius: 999px;
 
-    background: rgba(88, 166, 255, 0.05);
+    background: rgba(0, 161, 156, 0.06);
 
-    color: #9fcaff;
+    color: #73d6d1;
 
     font-size: 0.76rem;
 }
+
+
+/* HERO BUTTONS */
 
 .hero-buttons {
     display: flex;
@@ -220,27 +259,31 @@ a {
 }
 
 .btn-primary {
-    background: #58a6ff;
-    border: 1px solid #58a6ff;
+    background: #00a19c;
+    border: 1px solid #00a19c;
 
-    color: #07111d;
+    color: #02100f;
 }
 
 .btn-primary:hover {
     transform: translateY(-2px);
 
+    background: #12b8b1;
+
     box-shadow:
-        0 0 28px rgba(88, 166, 255, 0.30);
+        0 0 30px rgba(0, 161, 156, 0.30);
 }
 
 .btn-secondary {
-    border: 1px solid #354152;
+    border: 1px solid #4b5250;
 
-    color: #d8dee7;
+    color: #d9dddc;
 }
 
 .btn-secondary:hover {
-    border-color: #58a6ff;
+    transform: translateY(-2px);
+
+    border-color: #00a19c;
     color: #ffffff;
 }
 
@@ -260,14 +303,14 @@ a {
 
     overflow: hidden;
 
-    border: 1px solid #263243;
+    border: 1px solid #303735;
     border-radius: 18px;
 
-    background: #0b111a;
+    background: #080c0b;
 
     box-shadow:
-        0 25px 70px rgba(0, 0, 0, 0.35),
-        0 0 45px rgba(88, 166, 255, 0.07);
+        0 25px 70px rgba(0, 0, 0, 0.50),
+        0 0 50px rgba(0, 161, 156, 0.08);
 }
 
 .terminal-top {
@@ -279,8 +322,8 @@ a {
 
     padding: 0 18px;
 
-    background: #101720;
-    border-bottom: 1px solid #202b39;
+    background: #101412;
+    border-bottom: 1px solid #282e2c;
 }
 
 .terminal-top span {
@@ -289,7 +332,15 @@ a {
 
     border-radius: 50%;
 
-    background: #3c4653;
+    background: #59605e;
+}
+
+.terminal-top span:nth-child(2) {
+    background: #7d8582;
+}
+
+.terminal-top span:nth-child(3) {
+    background: #00a19c;
 }
 
 .terminal-content {
@@ -297,7 +348,7 @@ a {
 
     padding: 28px;
 
-    color: #d8dee7;
+    color: #d9dddc;
 
     font-family: "Courier New", Courier, monospace;
     font-size: 0.88rem;
@@ -308,7 +359,7 @@ a {
 }
 
 .terminal-symbol {
-    color: #58a6ff;
+    color: #00a19c;
 }
 
 .terminal-answer {
@@ -316,13 +367,16 @@ a {
 
     padding-left: 17px;
 
-    color: #7f8c9d;
+    color: #838c89;
 }
 
 .terminal-active {
     padding-left: 17px;
 
-    color: #58a6ff;
+    color: #00c9c1;
+
+    text-shadow:
+        0 0 14px rgba(0, 201, 193, 0.30);
 }
 
 
@@ -331,6 +385,8 @@ a {
 ======================================== */
 
 .section {
+    position: relative;
+
     padding: 120px 0;
 
     border-top: 1px solid rgba(255, 255, 255, 0.06);
@@ -339,11 +395,11 @@ a {
 .section-number {
     margin-bottom: 28px;
 
-    color: #58a6ff;
+    color: #00a19c;
 
     font-size: 0.75rem;
     font-weight: 700;
-    letter-spacing: 0.18em;
+    letter-spacing: 0.20em;
 }
 
 .section-title {
@@ -364,7 +420,7 @@ a {
 .section-heading > p {
     max-width: 430px;
 
-    color: #7f8b9b;
+    color: #7f8885;
 }
 
 
@@ -382,7 +438,7 @@ a {
 .about-text {
     padding-top: 8px;
 
-    color: #8d99a8;
+    color: #8c9592;
 
     font-size: 1rem;
 }
@@ -397,7 +453,12 @@ a {
 ======================================== */
 
 .projects-section {
-    background: #0a0f16;
+    background:
+        linear-gradient(
+            135deg,
+            #080b0a 0%,
+            #0a0f0e 100%
+        );
 }
 
 .project-grid {
@@ -416,10 +477,17 @@ a {
 
     padding: 32px;
 
-    border: 1px solid #222d3b;
+    overflow: hidden;
+
+    border: 1px solid #292f2d;
     border-radius: 20px;
 
-    background: #0c121b;
+    background:
+        linear-gradient(
+            145deg,
+            #0c100f,
+            #080c0b
+        );
 
     transition:
         transform 0.25s ease,
@@ -427,14 +495,36 @@ a {
         box-shadow 0.25s ease;
 }
 
-.project-card:hover {
-    transform: translateY(-5px);
 
-    border-color: rgba(88, 166, 255, 0.55);
+/* Petronas accent line */
+
+.project-card::before {
+    content: "";
+
+    position: absolute;
+    top: 0;
+    left: 0;
+
+    width: 100%;
+    height: 2px;
+
+    background: linear-gradient(
+        90deg,
+        #00a19c,
+        transparent 75%
+    );
+
+    opacity: 0.65;
+}
+
+.project-card:hover {
+    transform: translateY(-6px);
+
+    border-color: rgba(0, 161, 156, 0.65);
 
     box-shadow:
-        0 18px 50px rgba(0, 0, 0, 0.25),
-        0 0 35px rgba(88, 166, 255, 0.06);
+        0 22px 55px rgba(0, 0, 0, 0.32),
+        0 0 35px rgba(0, 161, 156, 0.08);
 }
 
 .project-number {
@@ -442,7 +532,7 @@ a {
     top: 25px;
     right: 28px;
 
-    color: #303c4b;
+    color: #353c39;
 
     font-size: 2.8rem;
     font-weight: 800;
@@ -451,17 +541,19 @@ a {
 .project-status {
     margin-bottom: 24px;
 
-    color: #58a6ff;
+    color: #00a19c;
 
     font-size: 0.68rem;
     font-weight: 700;
-    letter-spacing: 0.14em;
+    letter-spacing: 0.15em;
 }
 
 .project-card h3 {
     max-width: 80%;
 
     margin-bottom: 18px;
+
+    color: #f5f7f6;
 
     font-size: 1.6rem;
     line-height: 1.2;
@@ -472,7 +564,7 @@ a {
 
     margin-bottom: 25px;
 
-    color: #8491a1;
+    color: #828b88;
 
     font-size: 0.92rem;
 }
@@ -488,10 +580,10 @@ a {
 .project-tools span {
     padding: 6px 10px;
 
-    border: 1px solid #283547;
+    border: 1px solid #303936;
     border-radius: 999px;
 
-    color: #a8b4c4;
+    color: #abb3b0;
 
     font-size: 0.7rem;
 }
@@ -501,17 +593,17 @@ a {
 
     width: fit-content;
 
-    color: #dce6f2;
+    color: #dce2e0;
 
     font-size: 0.85rem;
     font-weight: 600;
     text-decoration: none;
 
-    transition: color 0.2s ease;
+    transition: 0.2s ease;
 }
 
 .project-link:hover {
-    color: #58a6ff;
+    color: #00c9c1;
 }
 
 
@@ -530,20 +622,37 @@ a {
 }
 
 .skill-card {
+    position: relative;
+
     min-height: 190px;
 
     padding: 27px;
 
-    border: 1px solid #222d3b;
+    overflow: hidden;
+
+    border: 1px solid #292f2d;
     border-radius: 17px;
 
-    background: #0b1119;
+    background:
+        linear-gradient(
+            145deg,
+            #0b0f0e,
+            #080b0a
+        );
+
+    transition: 0.25s ease;
+}
+
+.skill-card:hover {
+    border-color: rgba(0, 161, 156, 0.50);
+
+    transform: translateY(-3px);
 }
 
 .skill-card > p {
     margin-bottom: 35px;
 
-    color: #58a6ff;
+    color: #00a19c;
 
     font-family: "Courier New", Courier, monospace;
     font-size: 0.76rem;
@@ -552,11 +661,13 @@ a {
 .skill-card h3 {
     margin-bottom: 10px;
 
+    color: #f1f3f2;
+
     font-size: 1.1rem;
 }
 
 .skill-card span {
-    color: #7f8b9a;
+    color: #7f8885;
 
     font-size: 0.87rem;
     line-height: 1.8;
@@ -573,10 +684,10 @@ a {
     background:
         radial-gradient(
             circle at 50% 50%,
-            rgba(88, 166, 255, 0.06),
+            rgba(0, 161, 156, 0.08),
             transparent 35%
         ),
-        #080c12;
+        #050706;
 }
 
 .contact-container > h2 {
@@ -590,7 +701,7 @@ a {
 .contact-description {
     max-width: 600px;
 
-    color: #8793a3;
+    color: #87908d;
 
     font-size: 1rem;
 }
@@ -606,10 +717,10 @@ a {
 .contact-links a {
     padding: 11px 22px;
 
-    border: 1px solid #354152;
+    border: 1px solid #3b4340;
     border-radius: 999px;
 
-    color: #dbe3ec;
+    color: #dce1df;
 
     font-size: 0.85rem;
     font-weight: 600;
@@ -619,17 +730,25 @@ a {
 }
 
 .contact-links a:first-child {
-    border-color: #58a6ff;
-    background: #58a6ff;
+    border-color: #00a19c;
+    background: #00a19c;
 
-    color: #07111d;
+    color: #02100f;
 }
 
 .contact-links a:hover {
     transform: translateY(-2px);
 
-    border-color: #58a6ff;
+    border-color: #00a19c;
+
+    box-shadow:
+        0 0 25px rgba(0, 161, 156, 0.12);
 }
+
+
+/* ========================================
+   FOOTER
+======================================== */
 
 .footer {
     display: flex;
@@ -641,23 +760,55 @@ a {
 
     border-top: 1px solid rgba(255, 255, 255, 0.07);
 
-    color: #596575;
+    color: #5e6764;
 
     font-size: 0.75rem;
 }
 
 .footer a {
-    color: #778494;
+    color: #7b8582;
     text-decoration: none;
 }
 
 .footer a:hover {
-    color: #ffffff;
+    color: #00a19c;
 }
 
 
 /* ========================================
-   MOBILE / TABLET
+   TEXT SELECTION
+======================================== */
+
+::selection {
+    background: #00a19c;
+    color: #04100f;
+}
+
+
+/* ========================================
+   SCROLLBAR
+======================================== */
+
+::-webkit-scrollbar {
+    width: 9px;
+}
+
+::-webkit-scrollbar-track {
+    background: #050706;
+}
+
+::-webkit-scrollbar-thumb {
+    background: #303735;
+    border-radius: 10px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+    background: #00a19c;
+}
+
+
+/* ========================================
+   TABLET
 ======================================== */
 
 @media (max-width: 900px) {
@@ -707,6 +858,10 @@ a {
 }
 
 
+/* ========================================
+   MOBILE
+======================================== */
+
 @media (max-width: 600px) {
 
     .container {
@@ -752,6 +907,7 @@ a {
 
     .terminal-content {
         min-height: auto;
+
         padding: 23px;
 
         font-size: 0.78rem;
@@ -767,6 +923,7 @@ a {
 
     .project-card {
         min-height: 390px;
+
         padding: 25px;
     }
 
@@ -776,6 +933,7 @@ a {
 
     .project-card h3 {
         max-width: 90%;
+
         font-size: 1.35rem;
     }
 
